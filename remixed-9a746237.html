@@ -414,12 +414,7 @@ function tryInitTokenClient() {
   });
 }
 
-function signInGoogle() {
-  if (!cfg.clientId) {
-    showToast('Önce ⚙️ Kurulum sayfasından Client ID girin!');
-    showPage('setup');
-    return;
-  }
+if (!cfg.clientId) { initGoogleAuth(); setTimeout(signInGoogle, 1500); return; }
   if (!tokenClient) { initGoogleAuth(); setTimeout(signInGoogle, 1500); return; }
   tokenClient.requestAccessToken({ prompt: 'consent' });
 }
