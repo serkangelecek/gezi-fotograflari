@@ -242,14 +242,24 @@ const FOLDER_NAME = 'Gezi Fotoğrafları 2026';
 const SCOPES      = 'https://www.googleapis.com/auth/drive.file';
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
-let photos = [], pending = [], isTeacher = false, activeF = 'Tümü';
+let photos = [], pending = [], activeF = 'Tümü';
 let token = null, folderId = null, tokenClient = null;
 let gapiOk = false, gisOk = false;
+
+// localStorage yardımcıları
+function lsSet(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
+function lsGet(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
+function lsDel(k){ try{localStorage.removeItem(k);}catch(e){} }
+
+// Öğretmen oturumu
+let isTeacher = lsGet('gezi_teacher') === '1';
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 window.onload = () => {
   loadGoogleLibs();
-  showPage('gallery');
+  // Öğretmen oturumu devam ediyorsa direkt panele git
+  if (isTeacher) showPage('panel');
+  else showPage('gallery');
 };
 
 function loadGoogleLibs() {
@@ -303,6 +313,7 @@ function showPage(p) {
 function doLogin() {
   if (document.getElementById('pwIn').value === APP_PASS) {
     isTeacher = true;
+    lsSet('gezi_teacher', '1');
     document.getElementById('loginErr').style.display = 'none';
     document.getElementById('pwIn').value = '';
     showPage('panel');
@@ -310,7 +321,7 @@ function doLogin() {
     document.getElementById('loginErr').style.display = 'block';
   }
 }
-function doLogout() { isTeacher = false; token = null; showPage('gallery'); }
+function doLogout() { isTeacher = false; token = null; lsDel('gezi_teacher'); showPage('gallery'); }
 
 function signIn() {
   if (!tokenClient) { toast('Kütüphane yükleniyor, bekleyin...'); setTimeout(signIn, 1500); return; }
