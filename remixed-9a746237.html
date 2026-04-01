@@ -416,6 +416,7 @@ function tryInitTokenClient() {
 
 if (!cfg.clientId) { initGoogleAuth(); setTimeout(signInGoogle, 1500); return; }
   if (!tokenClient) { initGoogleAuth(); setTimeout(signInGoogle, 1500); return; }
+  console.log('tokenClient:', tokenClient);
   tokenClient.requestAccessToken({ prompt: 'consent' });
 }
 
