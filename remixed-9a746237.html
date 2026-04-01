@@ -236,10 +236,12 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 
 <script>
 // ── CONFIG (sabit — kurulum gerekmez) ─────────────────────────────────────────
-const CLIENT_ID = '653956591539-08k9lgb83u5282ccniq2bvdgmvcunsdi.apps.googleusercontent.com';
-const APP_PASS   = '123456';
+const CLIENT_ID   = '653956591539-08k9lgb83u5282ccniq2bvdgmvcunsdi.apps.googleusercontent.com';
+const APP_PASS    = '123456';
 const FOLDER_NAME = 'Gezi Fotoğrafları 2026';
+const FOLDER_ID   = '1HzDwfaXHrXJFbe-DzxfHyecizv8g5iR0';
 const SCOPES      = 'https://www.googleapis.com/auth/drive.file';
+const API_KEY     = '';
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
 let photos = [], pending = [], activeF = 'Tümü';
@@ -409,7 +411,7 @@ async function uploadPhotos() {
         const fname = loc.replace(/[^\w\sğüşöçİĞÜŞÖÇ]/g,'').trim() + '_' + Date.now() + '.' + (f.name.split('.').pop()||'jpg');
         const boundary = 'bnd' + Date.now();
         const body = `--${boundary}\r\nContent-Type: application/json\r\n\r\n` +
-          JSON.stringify({ name: fname, parents: [folderId], description: note||loc }) +
+          JSON.stringify({ name: fname, parents: [folderId], description: loc + '||' + (note||'') }) +
           `\r\n--${boundary}\r\nContent-Type: ${f.type}\r\nContent-Transfer-Encoding: base64\r\n\r\n${b64}\r\n--${boundary}--`;
         const res = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
           method: 'POST',
