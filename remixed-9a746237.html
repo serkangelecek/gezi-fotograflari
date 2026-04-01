@@ -274,14 +274,18 @@ function tryInit() {
     client_id: CLIENT_ID,
     scope: SCOPES,
     callback: async r => {
-      if (r.error) { toast('Bağlantı hatası: ' + r.error); return; }
+      if (r.error) { console.warn('Token err:', r.error); return; }
       token = r.access_token;
       gapi.client.setToken({ access_token: token });
       await ensureFolder();
       updateBanner();
-      toast('✅ Google Drive bağlandı!');
+      if (r.error === undefined) toast('✅ Google Drive bağlandı!');
     }
   });
+  // Sayfa açılınca sessizce otomatik bağlan (popup çıkmaz)
+  setTimeout(() => {
+    if (tokenClient) tokenClient.requestAccessToken({ prompt: '' });
+  }, 1500);
 }
 
 // ── PAGES ─────────────────────────────────────────────────────────────────────
@@ -310,7 +314,7 @@ function doLogout() { isTeacher = false; token = null; showPage('gallery'); }
 
 function signIn() {
   if (!tokenClient) { toast('Kütüphane yükleniyor, bekleyin...'); setTimeout(signIn, 1500); return; }
-  tokenClient.requestAccessToken({ prompt: 'consent' });
+  tokenClient.requestAccessToken({ prompt: token ? '' : 'consent' });
 }
 
 function signOut() {
