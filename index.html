@@ -11,32 +11,27 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 .nav-title{color:#fff;font-size:17px;font-weight:700;}
 .nav-title span{color:#f5c842;}
 .nav-btns{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
-.nav-btn{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:7px 14px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.2s;}
+.nav-btn{background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:7px 14px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;}
 .nav-btn:hover{background:rgba(255,255,255,0.25);}
 .nav-btn.active{background:#f5c842;color:#0c2d4a;border-color:#f5c842;}
 .nav-count{background:#f5c842;color:#0c2d4a;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;}
 .page{display:none;min-height:calc(100vh - 60px);}
 .page.active{display:block;}
 
-/* LOGIN */
 .login-wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 60px);padding:20px;}
 .login-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:380px;width:100%;text-align:center;border:1.5px solid #b5d4f4;}
 .login-sun{width:64px;height:64px;background:#f5c842;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:30px;}
 .login-card h2{font-size:22px;font-weight:700;color:#0c2d4a;margin-bottom:6px;}
 .login-card p{font-size:14px;color:#5a8aaa;margin-bottom:28px;}
 .login-card input{width:100%;padding:13px 16px;border:1.5px solid #b5d4f4;border-radius:12px;font-size:16px;color:#0c2d4a;letter-spacing:4px;text-align:center;margin-bottom:14px;outline:none;}
-.login-card input:focus{border-color:#1a7abf;}
 .login-err{color:#e05050;font-size:13px;margin-top:8px;display:none;}
-
-.btn{display:inline-block;padding:12px 24px;border-radius:30px;font-size:14px;font-weight:700;cursor:pointer;border:none;transition:opacity 0.15s;width:100%;}
-.btn:hover{opacity:0.88;}
+.btn{display:inline-block;padding:12px 24px;border-radius:30px;font-size:14px;font-weight:700;cursor:pointer;border:none;width:100%;}
 .btn-primary{background:#1a7abf;color:#fff;}
 .btn-yellow{background:#f5c842;color:#0c2d4a;}
 .btn-danger{background:#e05050;color:#fff;}
 .btn-green{background:#2ecc71;color:#fff;}
 .btn-sm{padding:7px 16px;font-size:13px;width:auto;}
 
-/* PANEL */
 .panel-wrap{max-width:900px;margin:0 auto;padding:24px 16px;}
 .auth-banner{border-radius:14px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;flex-wrap:wrap;background:#fff3cd;border:1.5px solid #f5c842;}
 .auth-banner.connected{background:#d4edda;border-color:#2ecc71;}
@@ -53,7 +48,6 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 .fg{display:flex;flex-direction:column;gap:5px;}
 .fg label{font-size:11px;font-weight:700;color:#5a8aaa;letter-spacing:1px;text-transform:uppercase;}
 .fg select,.fg input{padding:10px 14px;border:1.5px solid #b5d4f4;border-radius:10px;font-size:14px;color:#0c2d4a;outline:none;font-family:inherit;}
-.fg select:focus,.fg input:focus{border-color:#1a7abf;}
 .upload-zone{border:2px dashed #b5d4f4;border-radius:14px;padding:28px;text-align:center;cursor:pointer;background:#f0f8ff;position:relative;margin-bottom:12px;}
 .upload-zone:hover,.upload-zone.drag{border-color:#1a7abf;background:#ddf0fa;}
 .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
@@ -80,7 +74,6 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 .empty{text-align:center;padding:40px 20px;color:#5a8aaa;grid-column:1/-1;}
 .empty .ei{font-size:44px;margin-bottom:10px;}
 
-/* GALLERY */
 .gallery-wrap{max-width:1000px;margin:0 auto;padding:24px 16px;}
 .g-hero{text-align:center;padding:36px 20px 28px;background:#fff;border-radius:20px;margin-bottom:20px;border:1.5px solid #b5d4f4;}
 .g-hero h1{font-size:clamp(20px,5vw,34px);font-weight:700;color:#0c2d4a;margin-bottom:5px;}
@@ -99,7 +92,6 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 .gnote{font-size:12px;color:#5a8aaa;line-height:1.4;}
 .gtime{font-size:11px;color:#bbb;margin-top:2px;}
 
-/* LIGHTBOX */
 .lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:999;align-items:center;justify-content:center;padding:16px;}
 .lb.open{display:flex;}
 .lb img{max-width:92vw;max-height:86vh;object-fit:contain;border-radius:10px;}
@@ -129,7 +121,6 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
   </div>
 </nav>
 
-<!-- LOGIN -->
 <div class="page active" id="page-login">
   <div class="login-wrap">
     <div class="login-card">
@@ -143,7 +134,6 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
   </div>
 </div>
 
-<!-- PANEL -->
 <div class="page" id="page-panel">
   <div class="panel-wrap">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:8px;">
@@ -162,8 +152,7 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
     <div class="card">
       <h3>📤 Fotoğraf Yükle</h3>
       <div class="form-row">
-        <div class="fg">
-          <label>Konum</label>
+        <div class="fg"><label>Konum</label>
           <select id="selLoc">
             <option value="">-- Seçin --</option>
             <option>Konya Bilim Merkezi</option>
@@ -180,8 +169,7 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
             <option>Diğer</option>
           </select>
         </div>
-        <div class="fg">
-          <label>Açıklama (isteğe bağlı)</label>
+        <div class="fg"><label>Açıklama (isteğe bağlı)</label>
           <input type="text" id="inNote" placeholder="Kısa not...">
         </div>
       </div>
@@ -204,7 +192,6 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
   </div>
 </div>
 
-<!-- GALLERY -->
 <div class="page" id="page-gallery">
   <div class="gallery-wrap">
     <div class="g-hero">
@@ -216,11 +203,12 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
       </div>
     </div>
     <div class="loc-tabs" id="locTabs"></div>
-    <div class="g-grid" id="gGrid"><div class="empty" style="grid-column:1/-1"><div class="ei">📷</div><p>Gezi başladığında fotoğraflar burada görünecek!</p></div></div>
+    <div class="g-grid" id="gGrid">
+      <div class="empty" style="grid-column:1/-1"><div class="ei">📷</div><p>Fotoğraflar yükleniyor...</p></div>
+    </div>
   </div>
 </div>
 
-<!-- LIGHTBOX -->
 <div class="lb" id="lb" onclick="closeLb(event)">
   <div class="lb-x" onclick="closeLb()">✕</div>
   <img id="lbImg" src="" alt="">
@@ -235,41 +223,36 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 </div>
 
 <script>
-// ── CONFIG (sabit — kurulum gerekmez) ─────────────────────────────────────────
+// ── CONFIG ────────────────────────────────────────────────────────────────────
 const CLIENT_ID   = '653956591539-08k9lgb83u5282ccniq2bvdgmvcunsdi.apps.googleusercontent.com';
 const APP_PASS    = '123456';
-const FOLDER_NAME = 'Gezi Fotoğrafları 2026';
 const FOLDER_ID   = '1HzDwfaXHrXJFbe-DzxfHyecizv8g5iR0';
-const SCOPES      = 'https://www.googleapis.com/auth/drive.file';
-const API_KEY     = 'AIzaSyBM0TjFs0--JwACgyRYJRs-3zAckvR8p9I';
+const FOLDER_NAME = 'Gezi Fotoğrafları 2026';
+const SCOPES      = 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.readonly';
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
-let photos = [], pending = [], activeF = 'Tümü';
+let memPhotos = [], pending = [], activeF = 'Tümü';
 let token = null, folderId = null, tokenClient = null;
 let gapiOk = false, gisOk = false;
+let isTeacher = ls('gezi_teacher') === '1';
 
-// localStorage yardımcıları
+// ── LS ────────────────────────────────────────────────────────────────────────
+function ls(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
 function lsSet(k,v){ try{localStorage.setItem(k,v);}catch(e){} }
-function lsGet(k){ try{return localStorage.getItem(k);}catch(e){return null;} }
 function lsDel(k){ try{localStorage.removeItem(k);}catch(e){} }
-
-// Öğretmen oturumu
-let isTeacher = lsGet('gezi_teacher') === '1';
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
 window.onload = () => {
-  loadGoogleLibs();
-  // Öğretmen oturumu devam ediyorsa direkt panele git
+  loadLibs();
   if (isTeacher) showPage('panel');
-  else showPage('gallery');
+  else { showPage('gallery'); loadDrivePhotos(); }
 };
 
-function loadGoogleLibs() {
+function loadLibs() {
   const s1 = document.createElement('script');
   s1.src = 'https://accounts.google.com/gsi/client';
   s1.onload = () => { gisOk = true; tryInit(); };
   document.head.appendChild(s1);
-
   const s2 = document.createElement('script');
   s2.src = 'https://apis.google.com/js/api.js';
   s2.onload = () => gapi.load('client', async () => {
@@ -286,18 +269,16 @@ function tryInit() {
     client_id: CLIENT_ID,
     scope: SCOPES,
     callback: async r => {
-      if (r.error) { console.warn('Token err:', r.error); return; }
+      if (r.error) { console.warn(r.error); return; }
       token = r.access_token;
       gapi.client.setToken({ access_token: token });
       await ensureFolder();
       updateBanner();
-      if (r.error === undefined) toast('✅ Google Drive bağlandı!');
+      toast('✅ Google Drive bağlandı!');
     }
   });
-  // Sayfa açılınca sessizce otomatik bağlan (popup çıkmaz)
-  setTimeout(() => {
-    if (tokenClient) tokenClient.requestAccessToken({ prompt: '' });
-  }, 1500);
+  // Sessizce otomatik bağlan
+  setTimeout(() => { if (tokenClient) tokenClient.requestAccessToken({ prompt: '' }); }, 1500);
 }
 
 // ── PAGES ─────────────────────────────────────────────────────────────────────
@@ -306,7 +287,7 @@ function showPage(p) {
   document.querySelectorAll('.page').forEach(x => x.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(x => x.classList.remove('active'));
   document.getElementById('page-' + p).classList.add('active');
-  if (p === 'gallery') { document.getElementById('btnG').classList.add('active'); renderGallery(); }
+  if (p === 'gallery') { document.getElementById('btnG').classList.add('active'); loadDrivePhotos(); }
   if (p === 'panel')   { document.getElementById('btnT').classList.add('active'); renderAdmin(); }
   if (p === 'login')   document.getElementById('btnT').classList.add('active');
 }
@@ -314,27 +295,22 @@ function showPage(p) {
 // ── AUTH ──────────────────────────────────────────────────────────────────────
 function doLogin() {
   if (document.getElementById('pwIn').value === APP_PASS) {
-    isTeacher = true;
-    lsSet('gezi_teacher', '1');
+    isTeacher = true; lsSet('gezi_teacher','1');
     document.getElementById('loginErr').style.display = 'none';
     document.getElementById('pwIn').value = '';
     showPage('panel');
-  } else {
-    document.getElementById('loginErr').style.display = 'block';
-  }
+  } else { document.getElementById('loginErr').style.display = 'block'; }
 }
-function doLogout() { isTeacher = false; token = null; lsDel('gezi_teacher'); showPage('gallery'); }
+function doLogout() { isTeacher = false; lsDel('gezi_teacher'); showPage('gallery'); }
 
 function signIn() {
-  if (!tokenClient) { toast('Kütüphane yükleniyor, bekleyin...'); setTimeout(signIn, 1500); return; }
+  if (!tokenClient) { toast('Yükleniyor...'); setTimeout(signIn, 1500); return; }
   tokenClient.requestAccessToken({ prompt: token ? '' : 'consent' });
 }
-
 function signOut() {
   if (token) google.accounts.oauth2.revoke(token);
   token = null; updateBanner(); toast('Drive bağlantısı kesildi.');
 }
-
 function updateBanner() {
   const b = document.getElementById('authBanner');
   if (token) {
@@ -343,8 +319,7 @@ function updateBanner() {
       '<button class="btn btn-sm" style="background:#fff;color:#0c2d4a;border:1.5px solid #b5d4f4;" onclick="signOut()">Bağlantıyı Kes</button>';
   } else {
     b.className = 'auth-banner';
-    b.innerHTML = '<p>📁 Google Drive bağlantısı yok <span>— fotoğraflar sadece bellekte</span></p>' +
-      '<button class="btn btn-yellow btn-sm" onclick="signIn()">Google ile Bağlan</button>';
+    b.innerHTML = '<p>📁 Google Drive bağlantısı yok</p><button class="btn btn-yellow btn-sm" onclick="signIn()">Google ile Bağlan</button>';
   }
 }
 
@@ -356,19 +331,100 @@ async function ensureFolder() {
       { headers: { Authorization: 'Bearer ' + token } }
     );
     const d = await r.json();
-    if (d.files && d.files.length) { folderId = d.files[0].id; return; }
-    const cr = await fetch('https://www.googleapis.com/drive/v3/files', {
-      method: 'POST',
-      headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: FOLDER_NAME, mimeType: 'application/vnd.google-apps.folder' })
-    });
-    const cd = await cr.json();
-    folderId = cd.id;
-    toast('📁 Klasör oluşturuldu: ' + FOLDER_NAME);
+    folderId = (d.files && d.files.length) ? d.files[0].id : null;
+    if (!folderId) {
+      const cr = await fetch('https://www.googleapis.com/drive/v3/files', {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: FOLDER_NAME, mimeType: 'application/vnd.google-apps.folder' })
+      });
+      folderId = (await cr.json()).id;
+    }
   } catch(e) { console.error(e); }
 }
 
-// ── FILE HANDLING ─────────────────────────────────────────────────────────────
+// ── DRIVE PHOTOS (token ile oku) ──────────────────────────────────────────────
+async function loadDrivePhotos() {
+  const g = document.getElementById('gGrid');
+  g.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="spinner" style="margin:0 auto"></div><p style="margin-top:10px">Fotoğraflar yükleniyor...</p></div>';
+
+  // Token varsa Drive API ile çek
+  if (token) {
+    try {
+      const r = await fetch(
+        `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent("'" + FOLDER_ID + "' in parents and mimeType contains 'image/' and trashed=false")}&fields=files(id,name,description,createdTime)&orderBy=createdTime%20desc&pageSize=200`,
+        { headers: { Authorization: 'Bearer ' + token } }
+      );
+      const d = await r.json();
+      if (d.files && d.files.length) {
+        const drivePhotos = d.files.map(f => {
+          const parts = (f.description || '').split('||');
+          return {
+            id: 'drv_' + f.id,
+            src: `https://lh3.googleusercontent.com/d/${f.id}`,
+            loc: parts[0] || 'Diğer',
+            note: parts[1] || '',
+            time: new Date(f.createdTime).toLocaleString('tr-TR'),
+            date: new Date(f.createdTime).toDateString(),
+            driveId: f.id,
+            driveLink: `https://drive.google.com/file/d/${f.id}/view`
+          };
+        });
+        renderGallery(drivePhotos);
+        return;
+      }
+    } catch(e) { console.warn(e); }
+  }
+
+  // Token yoksa: Google Drive public folder embed ile göster
+  renderGalleryFromEmbed();
+}
+
+function renderGalleryFromEmbed() {
+  // Herkese açık klasörden iframe embed göster
+  const g = document.getElementById('gGrid');
+  g.style.display = 'block';
+  g.innerHTML = `
+    <div style="grid-column:1/-1;text-align:center;padding:20px 0;">
+      <p style="font-size:13px;color:#5a8aaa;margin-bottom:16px;">📁 Fotoğraflar Google Drive klasöründen yükleniyor...</p>
+      <iframe 
+        src="https://drive.google.com/embeddedfolderview?id=${FOLDER_ID}#grid" 
+        style="width:100%;height:600px;border:none;border-radius:14px;border:1.5px solid #b5d4f4;"
+        allowfullscreen>
+      </iframe>
+      <p style="font-size:12px;color:#aaa;margin-top:10px;">
+        <a href="https://drive.google.com/drive/folders/${FOLDER_ID}" target="_blank" style="color:#1a7abf;">📂 Drive'da Aç</a>
+      </p>
+    </div>`;
+  document.getElementById('gCount').textContent = 'Drive klasörü';
+}
+
+function renderGallery(list) {
+  updateBadge(list.length);
+  const locs = ['Tümü', ...new Set(list.map(p => p.loc))];
+  document.getElementById('locTabs').innerHTML = locs.map(l =>
+    `<button class="ltab${l===activeF?' active':''}" onclick="setGF('${esc(l)}')">${l==='Tümü'?'🌍 Tümü':'📍 '+l}</button>`).join('');
+  const filtered = activeF === 'Tümü' ? list : list.filter(p => p.loc === activeF);
+  const g = document.getElementById('gGrid');
+  g.style.display = '';
+  if (!filtered.length) {
+    g.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">📷</div><p>Bu konumda fotoğraf yok</p></div>';
+    return;
+  }
+  g.innerHTML = filtered.map(p =>
+    `<div class="g-item" onclick="openLb('https://lh3.googleusercontent.com/d/${p.driveId}=w1200','${esc(p.loc)}','${esc(p.note||'')}','${esc(p.driveLink||'')}')">
+      <img src="https://lh3.googleusercontent.com/d/${p.driveId}=w400" alt="${p.loc}" loading="lazy" onerror="this.src='https://drive.google.com/thumbnail?id=${p.driveId}&sz=w400'">
+      <div class="g-info">
+        <span class="gloc">📍 ${p.loc}</span>
+        ${p.note?`<p class="gnote">${p.note}</p>`:''}
+        <p class="gtime">${p.time}</p>
+      </div>
+    </div>`).join('');
+}
+
+function setGF(l) { activeF = l; loadDrivePhotos(); }
+
+// ── UPLOAD ────────────────────────────────────────────────────────────────────
 function handleFiles(files) {
   pending = Array.from(files);
   const g = document.getElementById('prevGrid');
@@ -391,12 +447,14 @@ function rmPrev(i) {
   pending.length ? handleFiles(pending) : (document.getElementById('prevGrid').innerHTML = '', document.getElementById('upBtn').style.display = 'none');
 }
 
-// ── UPLOAD ────────────────────────────────────────────────────────────────────
 async function uploadPhotos() {
   const loc = document.getElementById('selLoc').value;
   const note = document.getElementById('inNote').value.trim();
   if (!loc) { toast('Lütfen konum seçin!'); return; }
   if (!pending.length) { toast('Lütfen fotoğraf seçin!'); return; }
+  if (!token) { toast('Önce Google Drive\'a bağlanın!'); return; }
+  if (!folderId) { await ensureFolder(); }
+
   setLoad(true, 'Hazırlanıyor...', 0);
   const now = new Date(), timeStr = now.toLocaleString('tr-TR');
 
@@ -404,34 +462,28 @@ async function uploadPhotos() {
     setLoad(true, `Yükleniyor: ${i+1}/${pending.length}`, Math.round(i/pending.length*100));
     const f = pending[i];
     const b64 = await toB64(f);
-    let driveId = null, driveLink = null;
-
-    if (token && folderId) {
-      try {
-        const fname = loc.replace(/[^\w\sğüşöçİĞÜŞÖÇ]/g,'').trim() + '_' + Date.now() + '.' + (f.name.split('.').pop()||'jpg');
-        const boundary = 'bnd' + Date.now();
-        const body = `--${boundary}\r\nContent-Type: application/json\r\n\r\n` +
-          JSON.stringify({ name: fname, parents: [folderId], description: loc + '||' + (note||'') }) +
-          `\r\n--${boundary}\r\nContent-Type: ${f.type}\r\nContent-Transfer-Encoding: base64\r\n\r\n${b64}\r\n--${boundary}--`;
-        const res = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
-          method: 'POST',
-          headers: { Authorization: 'Bearer ' + token, 'Content-Type': `multipart/related; boundary=${boundary}` },
-          body
-        });
-        const data = await res.json();
-        driveId = data.id; driveLink = data.webViewLink;
-        // make public
-        await fetch(`https://www.googleapis.com/drive/v3/files/${driveId}/permissions`, {
-          method: 'POST',
-          headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
-          body: JSON.stringify({ role: 'reader', type: 'anyone' })
-        });
-      } catch(e) { console.error('Drive err', e); }
-    }
-
-    photos.unshift({ id: Date.now()+'_'+i, src: 'data:'+f.type+';base64,'+b64, loc, note, time: timeStr, date: now.toDateString(), driveId, driveLink });
-    const pi = document.getElementById('pi'+i);
-    if (pi) { const s = document.createElement('div'); s.className='st'; s.textContent = driveId ? '✅ Drive' : '💾 Bellek'; pi.appendChild(s); }
+    try {
+      const fname = loc.replace(/[^\w\sğüşöçİĞÜŞÖÇ]/g,'').trim() + '_' + Date.now() + '.' + (f.name.split('.').pop()||'jpg');
+      const boundary = 'bnd' + Date.now();
+      const body = `--${boundary}\r\nContent-Type: application/json\r\n\r\n` +
+        JSON.stringify({ name: fname, parents: [folderId], description: loc + '||' + (note||'') }) +
+        `\r\n--${boundary}\r\nContent-Type: ${f.type}\r\nContent-Transfer-Encoding: base64\r\n\r\n${b64}\r\n--${boundary}--`;
+      const res = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + token, 'Content-Type': `multipart/related; boundary=${boundary}` },
+        body
+      });
+      const data = await res.json();
+      // Herkese açık yap
+      await fetch(`https://www.googleapis.com/drive/v3/files/${data.id}/permissions`, {
+        method: 'POST',
+        headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ role: 'reader', type: 'anyone' })
+      });
+      memPhotos.unshift({ id: 'drv_'+data.id, src: `https://lh3.googleusercontent.com/d/${data.id}`, loc, note, time: timeStr, date: now.toDateString(), driveId: data.id, driveLink: data.webViewLink });
+      const pi = document.getElementById('pi'+i);
+      if (pi) { const s=document.createElement('div'); s.className='st'; s.textContent='✅ Drive'; pi.appendChild(s); }
+    } catch(e) { console.error(e); toast('Hata: ' + e.message); }
   }
 
   setLoad(true, 'Tamamlandı!', 100);
@@ -443,92 +495,67 @@ async function uploadPhotos() {
     document.getElementById('fileIn').value = '';
     document.getElementById('inNote').value = '';
     document.getElementById('selLoc').value = '';
-    updateBadge(); renderAdmin();
-    toast(`✅ ${photos.length} fotoğraf yüklendi` + (token ? ' (Drive\'a kaydedildi)' : ''));
+    renderAdmin();
+    toast(`✅ Fotoğraflar Drive'a yüklendi!`);
   }, 500);
 }
 
 function toB64(file) {
-  return new Promise(res => { const r = new FileReader(); r.onload = e => res(e.target.result.split(',')[1]); r.readAsDataURL(file); });
+  return new Promise(res => { const r=new FileReader(); r.onload=e=>res(e.target.result.split(',')[1]); r.readAsDataURL(file); });
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────────
-function updateBadge() {
-  const n = photos.length + ' fotoğraf';
-  document.getElementById('badge').textContent = n;
-  document.getElementById('gCount').textContent = n;
-}
-
+// ── ADMIN RENDER ──────────────────────────────────────────────────────────────
 function renderAdmin() {
-  updateBadge();
-  document.getElementById('sTotal').textContent = photos.length;
-  document.getElementById('sToday').textContent = photos.filter(p => p.date === new Date().toDateString()).length;
-  document.getElementById('sLocs').textContent = new Set(photos.map(p => p.loc)).size;
-  const locs = ['Tümü', ...new Set(photos.map(p => p.loc))];
-  document.getElementById('filterRow').innerHTML = locs.map(l =>
+  const list = memPhotos;
+  updateBadge(list.length);
+  document.getElementById('sTotal').textContent = list.length;
+  document.getElementById('sToday').textContent = list.filter(p=>p.date===new Date().toDateString()).length;
+  document.getElementById('sLocs').textContent = new Set(list.map(p=>p.loc)).size;
+  const locs = ['Tümü', ...new Set(list.map(p=>p.loc))];
+  document.getElementById('filterRow').innerHTML = locs.map(l=>
     `<button class="fbtn${l===activeF?' active':''}" onclick="setF('${esc(l)}')">${l}</button>`).join('');
-  const list = activeF === 'Tümü' ? photos : photos.filter(p => p.loc === activeF);
+  const filtered = activeF==='Tümü' ? list : list.filter(p=>p.loc===activeF);
   const el = document.getElementById('adminList');
-  if (!list.length) { el.innerHTML = '<div class="empty"><div class="ei">📭</div><p>Fotoğraf yok</p></div>'; return; }
-  el.innerHTML = list.map(p =>
+  if (!filtered.length) { el.innerHTML='<div class="empty"><div class="ei">📭</div><p>Fotoğraf yok</p></div>'; return; }
+  el.innerHTML = filtered.map(p=>
     `<div class="photo-item">
-      <img class="photo-img" src="${p.src}" onclick="openLb('${esc(p.src)}','${esc(p.loc)}','${esc(p.note||'')}','${esc(p.driveLink||'')}')">
+      <img class="photo-img" src="https://lh3.googleusercontent.com/d/${p.driveId}=w400" onerror="this.src='https://drive.google.com/thumbnail?id=${p.driveId}&sz=w400'" onclick="openLb('https://lh3.googleusercontent.com/d/${p.driveId}=w1200','${esc(p.loc)}','${esc(p.note||'')}','${esc(p.driveLink||'')}')">
       <div class="photo-info">
-        <span class="ploc">📍 ${p.loc}</span>${p.driveLink ? '<span class="pdrive">✅ Drive</span>' : ''}
-        ${p.note ? `<p class="pnote">${p.note}</p>` : ''}
+        <span class="ploc">📍 ${p.loc}</span><span class="pdrive">✅ Drive</span>
+        ${p.note?`<p class="pnote">${p.note}</p>`:''}
         <p class="ptime">🕐 ${p.time}</p>
         <div class="pacts">
-          ${p.driveLink ? `<a href="${p.driveLink}" target="_blank" class="btn btn-green btn-sm">Drive'da Aç</a>` : ''}
-          <button class="btn btn-danger btn-sm" onclick="delPhoto('${p.id}')">🗑 Sil</button>
+          <a href="${p.driveLink}" target="_blank" class="btn btn-green btn-sm">Drive'da Aç</a>
         </div>
       </div>
     </div>`).join('');
 }
 
-function setF(l) { activeF = l; renderAdmin(); }
-
-function delPhoto(id) {
-  if (!confirm('Silmek istiyor musunuz?')) return;
-  photos = photos.filter(p => p.id !== id);
-  renderAdmin(); toast('Fotoğraf silindi.');
-}
-
-function renderGallery() {
-  updateBadge();
-  const locs = ['Tümü', ...new Set(photos.map(p => p.loc))];
-  document.getElementById('locTabs').innerHTML = locs.map(l =>
-    `<button class="ltab${l===activeF?' active':''}" onclick="setGF('${esc(l)}')">${l==='Tümü'?'🌍 Tümü':'📍 '+l}</button>`).join('');
-  const list = activeF === 'Tümü' ? photos : photos.filter(p => p.loc === activeF);
-  const g = document.getElementById('gGrid');
-  if (!list.length) { g.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="ei">📷</div><p>Gezi başladığında fotoğraflar burada görünecek!</p></div>'; return; }
-  g.innerHTML = list.map(p =>
-    `<div class="g-item" onclick="openLb('${esc(p.src)}','${esc(p.loc)}','${esc(p.note||'')}','${esc(p.driveLink||'')}')">
-      <img src="${p.src}" alt="${p.loc}">
-      <div class="g-info"><span class="gloc">📍 ${p.loc}</span>${p.note?`<p class="gnote">${p.note}</p>`:''}<p class="gtime">${p.time}</p></div>
-    </div>`).join('');
-}
-
-function setGF(l) { activeF = l; renderGallery(); }
+function setF(l) { activeF=l; renderAdmin(); }
 
 // ── LIGHTBOX ──────────────────────────────────────────────────────────────────
-function openLb(src, loc, note, dl) {
+function openLb(src,loc,note,dl) {
   document.getElementById('lbImg').src = src;
-  document.getElementById('lbInfo').innerHTML = '📍 ' + loc + (note ? ' — ' + note : '') +
-    (dl ? ` <a href="${dl}" target="_blank" onclick="event.stopPropagation()">↗ Drive</a>` : '');
+  document.getElementById('lbInfo').innerHTML = '📍 '+loc+(note?' — '+note:'')+
+    (dl?` <a href="${dl}" target="_blank" onclick="event.stopPropagation()">↗ Drive</a>`:'');
   document.getElementById('lb').classList.add('open');
 }
-function closeLb(e) { if (!e || e.target !== document.getElementById('lbImg')) document.getElementById('lb').classList.remove('open'); }
+function closeLb(e) { if(!e||e.target!==document.getElementById('lbImg')) document.getElementById('lb').classList.remove('open'); }
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
+function updateBadge(n) {
+  const t = (n||0)+' fotoğraf';
+  document.getElementById('badge').textContent = t;
+  document.getElementById('gCount').textContent = t;
+}
 function toast(msg) { const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3200); }
 function setLoad(v,msg,pct) { document.getElementById('loading').classList.toggle('show',v); if(msg)document.getElementById('ldMsg').textContent=msg; if(pct!==undefined)document.getElementById('progFill').style.width=pct+'%'; }
-function esc(s) { return (s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+function esc(s){ return (s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
 
-// Drag & drop
-const uz = document.getElementById('uz');
-uz.addEventListener('dragover', e=>{e.preventDefault();uz.classList.add('drag');});
-uz.addEventListener('dragleave', ()=>uz.classList.remove('drag'));
-uz.addEventListener('drop', e=>{e.preventDefault();uz.classList.remove('drag');handleFiles(e.dataTransfer.files);});
+const uz=document.getElementById('uz');
+uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('drag');});
+uz.addEventListener('dragleave',()=>uz.classList.remove('drag'));
+uz.addEventListener('drop',e=>{e.preventDefault();uz.classList.remove('drag');handleFiles(e.dataTransfer.files);});
 </script>
 </body>
 </html>
