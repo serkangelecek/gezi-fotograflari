@@ -17,111 +17,85 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 .nav-count{background:#f5c842;color:#0c2d4a;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;}
 .page{display:none;min-height:calc(100vh - 60px);}
 .page.active{display:block;}
-
-/* LOGIN */
-.login-wrap{display:flex;align-items:center;justify-content:center;min-height:calc(100vh-60px);padding:20px;}
+.login-wrap{display:flex;align-items:center;justify-content:center;min-height:80vh;padding:20px;}
 .login-card{background:#fff;border-radius:24px;padding:40px 36px;max-width:380px;width:100%;text-align:center;border:1.5px solid #b5d4f4;}
 .login-sun{width:64px;height:64px;background:#f5c842;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:30px;}
 .login-card h2{font-size:21px;font-weight:700;margin-bottom:6px;}
-.login-card p{font-size:14px;color:#5a8aaa;margin-bottom:24px;}
-.login-card input{width:100%;padding:12px 16px;border:1.5px solid #b5d4f4;border-radius:12px;font-size:16px;color:#0c2d4a;letter-spacing:4px;text-align:center;margin-bottom:12px;outline:none;}
-.login-err{color:#e05050;font-size:13px;margin-top:6px;display:none;}
-
+.login-card p{font-size:14px;color:#5a8aaa;margin-bottom:20px;}
+.inp{width:100%;padding:12px 16px;border:1.5px solid #b5d4f4;border-radius:12px;font-size:15px;color:#0c2d4a;margin-bottom:10px;outline:none;font-family:inherit;}
+.inp:focus{border-color:#1a7abf;}
+.login-err{color:#e05050;font-size:13px;margin-top:5px;display:none;}
 .btn{display:inline-block;padding:11px 22px;border-radius:30px;font-size:14px;font-weight:700;cursor:pointer;border:none;width:100%;transition:opacity .15s;}
 .btn:hover{opacity:.88;}
 .btn-primary{background:#1a7abf;color:#fff;}
 .btn-yellow{background:#f5c842;color:#0c2d4a;}
 .btn-danger{background:#e05050;color:#fff;}
-.btn-green{background:#2ecc71;color:#fff;}
 .btn-sm{padding:6px 14px;font-size:12px;width:auto;}
-
-/* PANEL */
 .panel-wrap{max-width:960px;margin:0 auto;padding:20px 16px;}
-.auth-banner{border-radius:14px;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px;flex-wrap:wrap;background:#fff3cd;border:1.5px solid #f5c842;}
-.auth-banner.connected{background:#d4edda;border-color:#2ecc71;}
-.auth-banner p{font-size:13px;font-weight:600;color:#0c2d4a;}
-.auth-banner p span{color:#5a8aaa;font-weight:400;}
-.auth-banner .user-info{display:flex;align-items:center;gap:8px;}
-.auth-banner .avatar{width:32px;height:32px;border-radius:50%;border:2px solid #2ecc71;}
-
-/* STATS */
-.stats-section{margin-bottom:22px;}
-.stats-section h3{font-size:15px;font-weight:700;color:#0c2d4a;margin-bottom:12px;}
-.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px;}
+.welcome-bar{background:#e6f1fb;border:1.5px solid #b5d4f4;border-radius:14px;padding:12px 18px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.welcome-bar p{font-size:14px;color:#0c2d4a;}
+.welcome-bar strong{color:#1a7abf;}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:16px;}
 .stat-card{background:#fff;border:1.5px solid #b5d4f4;border-radius:14px;padding:14px;text-align:center;}
-.stat-card.highlight{border-color:#f5c842;background:#fffbea;}
+.stat-card.hl{border-color:#f5c842;background:#fffbea;}
 .stat-num{font-size:26px;font-weight:700;color:#1a7abf;}
 .stat-label{font-size:11px;color:#5a8aaa;margin-top:2px;}
-
-/* TEACHER TABLE */
-.teacher-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid #b5d4f4;}
-.teacher-table th{background:#f0f8ff;padding:10px 14px;font-size:12px;font-weight:700;color:#5a8aaa;text-align:left;border-bottom:1.5px solid #b5d4f4;}
-.teacher-table td{padding:10px 14px;font-size:13px;border-bottom:1px solid #e8f4fb;}
-.teacher-table tr:last-child td{border-bottom:none;}
-.teacher-table tr:hover td{background:#f8fcff;}
-.t-badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;}
-.t-badge.me{background:#ddf0fa;color:#0c447c;}
-
-/* LOC TABLE */
-.loc-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid #b5d4f4;margin-top:10px;}
-.loc-table th{background:#f0f8ff;padding:9px 13px;font-size:12px;font-weight:700;color:#5a8aaa;text-align:left;border-bottom:1.5px solid #b5d4f4;}
-.loc-table td{padding:9px 13px;font-size:13px;border-bottom:1px solid #e8f4fb;}
-.loc-table tr:last-child td{border-bottom:none;}
-.bar{height:8px;background:#ddf0fa;border-radius:10px;margin-top:4px;overflow:hidden;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media(max-width:560px){.two-col{grid-template-columns:1fr;}}
+.mini-label{font-size:11px;font-weight:700;color:#5a8aaa;margin-bottom:7px;letter-spacing:.5px;}
+.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid #b5d4f4;}
+.tbl th{background:#f0f8ff;padding:9px 12px;font-size:11px;font-weight:700;color:#5a8aaa;text-align:left;border-bottom:1.5px solid #b5d4f4;}
+.tbl td{padding:9px 12px;font-size:13px;border-bottom:1px solid #e8f4fb;}
+.tbl tr:last-child td{border-bottom:none;}
+.bar{height:7px;background:#ddf0fa;border-radius:10px;margin-top:3px;overflow:hidden;}
 .bar-fill{height:100%;background:#1a7abf;border-radius:10px;}
-
-.card{background:#fff;border:1.5px solid #b5d4f4;border-radius:20px;padding:22px;margin-bottom:18px;}
+.card{background:#fff;border:1.5px solid #b5d4f4;border-radius:20px;padding:22px;margin-bottom:16px;}
 .card h3{font-size:15px;font-weight:700;color:#0c2d4a;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
-@media(max-width:560px){.form-row{grid-template-columns:1fr;}}
+@media(max-width:500px){.form-row{grid-template-columns:1fr;}}
 .fg{display:flex;flex-direction:column;gap:5px;}
 .fg label{font-size:11px;font-weight:700;color:#5a8aaa;letter-spacing:1px;text-transform:uppercase;}
 .fg select,.fg input{padding:9px 13px;border:1.5px solid #b5d4f4;border-radius:10px;font-size:14px;color:#0c2d4a;outline:none;font-family:inherit;}
+.fg select:focus,.fg input:focus{border-color:#1a7abf;}
 .upload-zone{border:2px dashed #b5d4f4;border-radius:14px;padding:26px;text-align:center;cursor:pointer;background:#f0f8ff;position:relative;margin-bottom:10px;}
 .upload-zone:hover,.upload-zone.drag{border-color:#1a7abf;background:#ddf0fa;}
 .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
-.upload-zone .uz-icon{font-size:30px;margin-bottom:5px;}
+.upload-zone .uzi{font-size:30px;margin-bottom:5px;}
 .upload-zone p{font-size:13px;color:#5a8aaa;}
 .upload-zone p strong{color:#1a7abf;}
-.prev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(85px,1fr));gap:7px;margin-bottom:10px;}
+.prev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:7px;margin-bottom:10px;}
 .prev-item{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;border:1.5px solid #b5d4f4;}
 .prev-item img{width:100%;height:100%;object-fit:cover;}
 .prev-item .dp{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.6);color:#fff;border:none;border-radius:50%;width:18px;height:18px;font-size:10px;cursor:pointer;}
-.prev-item .st{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.6);color:#fff;font-size:9px;text-align:center;padding:2px;}
 .filter-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
 .fbtn{padding:5px 11px;border-radius:20px;font-size:12px;font-weight:700;border:1.5px solid #b5d4f4;background:#f0f8ff;color:#0c447c;cursor:pointer;}
 .fbtn.active,.fbtn:hover{background:#1a7abf;color:#fff;border-color:#1a7abf;}
-.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:12px;}
 .photo-item{border:1.5px solid #b5d4f4;border-radius:14px;overflow:hidden;background:#f0f8ff;}
 .photo-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;cursor:pointer;}
 .photo-info{padding:8px 10px;}
 .ploc{display:inline-block;background:#ddf0fa;color:#0c447c;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:3px;}
-.pnote{font-size:12px;color:#5a8aaa;margin-bottom:3px;line-height:1.4;}
+.pnote{font-size:12px;color:#5a8aaa;margin-bottom:2px;line-height:1.4;}
 .ptime{font-size:11px;color:#aaa;}
 .puploader{font-size:11px;color:#1a7abf;font-weight:600;margin-top:2px;}
-.pacts{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap;}
+.pacts{display:flex;gap:5px;margin-top:6px;}
 .empty{text-align:center;padding:36px 20px;color:#5a8aaa;grid-column:1/-1;}
 .empty .ei{font-size:40px;margin-bottom:8px;}
-
-/* GALLERY */
 .gallery-wrap{max-width:1060px;margin:0 auto;padding:20px 16px;}
 .g-hero{text-align:center;padding:32px 20px 24px;background:#fff;border-radius:20px;margin-bottom:18px;border:1.5px solid #b5d4f4;}
 .g-hero h1{font-size:clamp(20px,5vw,32px);font-weight:700;color:#0c2d4a;margin-bottom:5px;}
 .g-hero p{font-size:14px;color:#5a8aaa;}
 .g-meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
 .g-meta span{background:#e8f4fb;border:1px solid #b5d4f4;color:#0c447c;font-size:13px;font-weight:600;padding:4px 12px;border-radius:20px;}
-
-/* PUBLIC STATS */
 .pub-stats{background:#fff;border:1.5px solid #b5d4f4;border-radius:20px;padding:20px;margin-bottom:18px;}
-.pub-stats h3{font-size:15px;font-weight:700;color:#0c2d4a;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
-.pub-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:16px;}
+.pub-stats h3{font-size:15px;font-weight:700;color:#0c2d4a;margin-bottom:12px;}
+.pub-stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:12px;}
 .pub-stat{text-align:center;background:#f0f8ff;border-radius:12px;padding:12px 8px;}
 .pub-stat-num{font-size:24px;font-weight:700;color:#1a7abf;}
 .pub-stat-label{font-size:11px;color:#5a8aaa;margin-top:2px;}
-.teacher-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px;}
+.t-chips{display:flex;flex-wrap:wrap;gap:7px;}
 .t-chip{background:#ddf0fa;color:#0c447c;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px;}
 .t-chip .cnt{background:#1a7abf;color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;}
-
 .loc-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px;}
 .ltab{padding:7px 15px;border-radius:20px;font-size:13px;font-weight:700;border:1.5px solid #b5d4f4;background:#fff;color:#0c447c;cursor:pointer;}
 .ltab.active,.ltab:hover{background:#1a7abf;color:#fff;border-color:#1a7abf;}
@@ -133,23 +107,19 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 .gloc{display:inline-block;background:#ddf0fa;color:#0c447c;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:3px;}
 .gnote{font-size:12px;color:#5a8aaa;line-height:1.4;}
 .gtime{font-size:11px;color:#bbb;margin-top:2px;}
-.guploader{font-size:11px;color:#1a7abf;font-weight:600;margin-top:1px;}
-
-/* LIGHTBOX */
+.guploader{font-size:11px;color:#1a7abf;font-weight:600;}
 .lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:999;align-items:center;justify-content:center;padding:16px;}
 .lb.open{display:flex;}
 .lb img{max-width:92vw;max-height:86vh;object-fit:contain;border-radius:10px;}
 .lb-x{position:fixed;top:14px;right:18px;color:#fff;font-size:24px;cursor:pointer;background:rgba(255,255,255,.12);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
 .lb-info{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.75);color:#fff;padding:8px 18px;border-radius:20px;font-size:13px;text-align:center;max-width:92vw;}
-.lb-info a{color:#f5c842;text-decoration:none;margin-left:8px;}
-
-.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0c2d4a;color:#fff;padding:10px 22px;border-radius:30px;font-size:14px;font-weight:600;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none;max-width:92vw;text-align:center;}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0c2d4a;color:#fff;padding:10px 22px;border-radius:30px;font-size:14px;font-weight:600;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw;text-align:center;}
 .toast.show{opacity:1;}
-.loading{display:none;position:fixed;inset:0;background:rgba(255,255,255,.88);z-index:9998;align-items:center;justify-content:center;flex-direction:column;gap:10px;}
+.loading{display:none;position:fixed;inset:0;background:rgba(255,255,255,.9);z-index:9998;align-items:center;justify-content:center;flex-direction:column;gap:10px;}
 .loading.show{display:flex;}
 .spinner{width:36px;height:36px;border:4px solid #b5d4f4;border-top-color:#1a7abf;border-radius:50%;animation:spin .7s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
-.prog{width:230px;height:6px;background:#b5d4f4;border-radius:10px;overflow:hidden;}
+.prog{width:220px;height:6px;background:#b5d4f4;border-radius:10px;overflow:hidden;}
 .prog-fill{height:100%;background:#1a7abf;border-radius:10px;transition:width .3s;}
 #ldMsg{font-size:14px;color:#1a7abf;font-weight:600;}
 </style>
@@ -171,10 +141,11 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
     <div class="login-card">
       <div class="login-sun">☀</div>
       <h2>Öğretmen Girişi</h2>
-      <p>Fotoğraf yüklemek için şifreyi girin</p>
-      <input type="password" id="pwIn" placeholder="••••••" onkeydown="if(event.key==='Enter')doLogin()">
+      <p>Adınızı girin ve şifreyi yazın</p>
+      <input class="inp" type="text" id="nameIn" placeholder="Adınız Soyadınız">
+      <input class="inp" type="password" id="pwIn" placeholder="Şifre" onkeydown="if(event.key==='Enter')doLogin()">
       <button class="btn btn-primary" onclick="doLogin()">Giriş Yap</button>
-      <p class="login-err" id="loginErr">Şifre yanlış!</p>
+      <p class="login-err" id="loginErr">Ad boş bırakılamaz veya şifre yanlış!</p>
     </div>
   </div>
 </div>
@@ -182,38 +153,24 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 <!-- PANEL -->
 <div class="page" id="page-panel">
   <div class="panel-wrap">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;">
       <h2 style="font-size:18px;font-weight:700;">👨‍🏫 Öğretmen Paneli</h2>
       <button class="btn btn-sm" style="background:#f0f8ff;border:1.5px solid #b5d4f4;color:#0c2d4a;" onclick="doLogout()">Çıkış</button>
     </div>
-
-    <div class="auth-banner" id="authBanner">
-      <p>📁 Google Drive bağlantısı yok <span>— okul mailinizle bağlanın</span></p>
-      <button class="btn btn-yellow btn-sm" onclick="signIn()">Google ile Bağlan</button>
+    <div class="welcome-bar">
+      <p>Hoş geldiniz: <strong id="welcomeName">—</strong></p>
+      <p style="font-size:12px;color:#5a8aaa;">✅ Mail bağlantısı gerekmez — fotoğraflar merkezi sunucuya kaydedilir</p>
     </div>
-
-    <!-- STATS -->
-    <div class="stats-section">
-      <h3>📊 Gezi İstatistikleri</h3>
-      <div class="stats-row">
-        <div class="stat-card highlight"><div class="stat-num" id="sTotal">—</div><div class="stat-label">Toplam Fotoğraf</div></div>
-        <div class="stat-card"><div class="stat-num" id="sToday">—</div><div class="stat-label">Bugün Yüklenen</div></div>
-        <div class="stat-card"><div class="stat-num" id="sLocs">—</div><div class="stat-label">Ziyaret Edilen Yer</div></div>
-        <div class="stat-card"><div class="stat-num" id="sTeachers">—</div><div class="stat-label">Aktif Öğretmen</div></div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex-wrap:wrap;">
-        <div>
-          <p style="font-size:12px;font-weight:700;color:#5a8aaa;margin-bottom:8px;letter-spacing:.5px;">📍 KONUMA GÖRE</p>
-          <table class="loc-table" id="locTable"><tr><td style="color:#aaa;padding:12px;text-align:center;">Yükleniyor...</td></tr></table>
-        </div>
-        <div>
-          <p style="font-size:12px;font-weight:700;color:#5a8aaa;margin-bottom:8px;letter-spacing:.5px;">👤 ÖĞRETMENE GÖRE</p>
-          <table class="teacher-table" id="teacherTable"><tr><td style="color:#aaa;padding:12px;text-align:center;">Yükleniyor...</td></tr></table>
-        </div>
-      </div>
+    <div class="stats-row">
+      <div class="stat-card hl"><div class="stat-num" id="sTotal">0</div><div class="stat-label">Toplam Fotoğraf</div></div>
+      <div class="stat-card"><div class="stat-num" id="sToday">0</div><div class="stat-label">Bugün Yüklenen</div></div>
+      <div class="stat-card"><div class="stat-num" id="sLocs">0</div><div class="stat-label">Ziyaret Edilen Yer</div></div>
+      <div class="stat-card"><div class="stat-num" id="sTeachers">0</div><div class="stat-label">Aktif Öğretmen</div></div>
     </div>
-
+    <div class="two-col">
+      <div><p class="mini-label">📍 KONUMA GÖRE</p><table class="tbl" id="locTable"><tr><td style="color:#aaa;padding:10px;text-align:center;">Yükleniyor...</td></tr></table></div>
+      <div><p class="mini-label">👤 ÖĞRETMENE GÖRE</p><table class="tbl" id="teacherTable"><tr><td style="color:#aaa;padding:10px;text-align:center;">Yükleniyor...</td></tr></table></div>
+    </div>
     <div class="card">
       <h3>📤 Fotoğraf Yükle</h3>
       <div class="form-row">
@@ -240,17 +197,16 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
       </div>
       <div class="upload-zone" id="uz">
         <input type="file" id="fileIn" accept="image/*" multiple onchange="handleFiles(this.files)">
-        <div class="uz-icon">📷</div>
+        <div class="uzi">📷</div>
         <p><strong>Fotoğraf seç veya çek</strong></p>
         <p>Birden fazla seçebilirsiniz</p>
       </div>
       <div class="prev-grid" id="prevGrid"></div>
       <button class="btn btn-yellow" id="upBtn" onclick="uploadPhotos()" style="display:none;">☀ Fotoğrafları Yükle</button>
     </div>
-
     <div class="card">
-      <h3>Son Yüklenen Fotoğraflar
-        <button class="btn btn-sm" style="background:#f0f8ff;border:1.5px solid #b5d4f4;color:#0c2d4a;font-size:12px;" onclick="loadDriveStats()">↺ Yenile</button>
+      <h3>Yüklenen Fotoğraflar
+        <button class="btn btn-sm" style="background:#f0f8ff;border:1.5px solid #b5d4f4;color:#0c2d4a;font-size:12px;" onclick="loadAll()">↺ Yenile</button>
       </h3>
       <div class="filter-row" id="filterRow"></div>
       <div class="photo-grid" id="adminList"><div class="empty"><div class="ei">📭</div><p>Henüz fotoğraf yok</p></div></div>
@@ -265,24 +221,21 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
       <h1>☀ Antalya & Konya Gezisi</h1>
       <p>Öğretmenlerimizin gezi boyunca çektiği fotoğraflar</p>
       <div class="g-meta">
-        <span>📅 1-3 Mayıs 2026</span>
-        <span id="gCount">—</span>
+        <span>📅 24–26 Nisan 2026</span>
+        <span id="gCount">0 fotoğraf</span>
       </div>
     </div>
-
-    <!-- PUBLIC STATS -->
-    <div class="pub-stats" id="pubStats">
+    <div class="pub-stats">
       <h3>📊 Gezi Özeti</h3>
       <div class="pub-stats-grid">
-        <div class="pub-stat"><div class="pub-stat-num" id="pTotal">—</div><div class="pub-stat-label">Toplam Fotoğraf</div></div>
-        <div class="pub-stat"><div class="pub-stat-num" id="pToday">—</div><div class="pub-stat-label">Bugün Yüklenen</div></div>
-        <div class="pub-stat"><div class="pub-stat-num" id="pLocs">—</div><div class="pub-stat-label">Ziyaret Edilen Yer</div></div>
-        <div class="pub-stat"><div class="pub-stat-num" id="pTeachers">—</div><div class="pub-stat-label">Fotoğraf Çeken</div></div>
+        <div class="pub-stat"><div class="pub-stat-num" id="pTotal">0</div><div class="pub-stat-label">Toplam Fotoğraf</div></div>
+        <div class="pub-stat"><div class="pub-stat-num" id="pToday">0</div><div class="pub-stat-label">Bugün Yüklenen</div></div>
+        <div class="pub-stat"><div class="pub-stat-num" id="pLocs">0</div><div class="pub-stat-label">Ziyaret Edilen Yer</div></div>
+        <div class="pub-stat"><div class="pub-stat-num" id="pTeachers">0</div><div class="pub-stat-label">Fotoğraf Çeken</div></div>
       </div>
-      <p style="font-size:12px;font-weight:700;color:#5a8aaa;margin-bottom:8px;">👤 Fotoğraf Yükleyen Öğretmenler</p>
-      <div class="teacher-chips" id="teacherChips"><span style="color:#aaa;font-size:13px;">Yükleniyor...</span></div>
+      <p class="mini-label" style="margin-bottom:8px;">👤 Fotoğraf Yükleyen Öğretmenler</p>
+      <div class="t-chips" id="teacherChips"><span style="color:#aaa;font-size:13px">Henüz yükleme yapılmadı</span></div>
     </div>
-
     <div class="loc-tabs" id="locTabs"></div>
     <div class="g-grid" id="gGrid">
       <div class="empty" style="grid-column:1/-1"><div class="spinner" style="margin:0 auto 10px"></div><p>Fotoğraflar yükleniyor...</p></div>
@@ -290,7 +243,7 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
   </div>
 </div>
 
-<div class="lb" id="lb" onclick="closeLb(event)">
+<div class="lb" id="lb" onclick="if(event.target===this)closeLb()">
   <div class="lb-x" onclick="closeLb()">✕</div>
   <img id="lbImg" src="" alt="">
   <div class="lb-info" id="lbInfo"></div>
@@ -303,378 +256,196 @@ body{font-family:'Segoe UI',sans-serif;background:#e8f4fb;color:#0c2d4a;min-heig
 </div>
 
 <script>
-const CLIENT_ID   = '653956591539-08k9lgb83u5282ccniq2bvdgmvcunsdi.apps.googleusercontent.com';
-const APP_PASS    = 'gelecek3326';
-const FOLDER_ID   = '1HzDwfaXHrXJFbe-DzxfHyecizv8g5iR0';
-const FOLDER_NAME = 'Gezi Fotoğrafları 2026';
-const SCOPES      = 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/userinfo.profile';
+const APP_PASS = 'gelecek3326';
+const SK = 'geziPhotos_v2';
 
-let drivePhotos=[], pending=[], activeF='Tümü';
-let token=null, folderId=null, tokenClient=null;
-let gapiOk=false, gisOk=false;
-let currentUser=null; // {name, email, avatar}
-let isTeacher = ls('gezi_teacher')==='1';
+let photos=[], pending=[], activeF='Tümü', myName='';
+let isTeacher = ls('gt')==='1';
 
 function ls(k){try{return localStorage.getItem(k);}catch(e){return null;}}
-function lsSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
-function lsDel(k){try{localStorage.removeItem(k);}catch(e){}}
+function lsS(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function lsD(k){try{localStorage.removeItem(k);}catch(e){}}
 
-window.onload=()=>{
-  loadLibs();
-  if(isTeacher) showPage('panel');
-  else{showPage('gallery'); loadDrivePhotos();}
+// ── STORAGE: window.storage (Claude persistent) varsa onu kullan, yoksa localStorage
+async function sGet(){
+  if(window.storage){
+    try{ const r=await window.storage.get(SK,true); return r?JSON.parse(r.value):[];}
+    catch(e){ return JSON.parse(ls(SK)||'[]'); }
+  }
+  try{ return JSON.parse(ls(SK)||'[]'); }catch(e){ return []; }
+}
+async function sSet(data){
+  const str=JSON.stringify(data);
+  if(window.storage){
+    try{ await window.storage.set(SK,str,true); return true; }catch(e){}
+  }
+  try{ lsS(SK,str); return true; }catch(e){ return false; }
+}
+
+window.onload=async()=>{
+  myName=ls('gn')||'';
+  await loadAll();
+  if(isTeacher&&myName) showPage('panel');
+  else showPage('gallery');
 };
 
-function loadLibs(){
-  const s1=document.createElement('script');
-  s1.src='https://accounts.google.com/gsi/client';
-  s1.onload=()=>{gisOk=true;tryInit();};
-  document.head.appendChild(s1);
-  const s2=document.createElement('script');
-  s2.src='https://apis.google.com/js/api.js';
-  s2.onload=()=>gapi.load('client',async()=>{
-    await gapi.client.init({});
-    gapiOk=true; tryInit();
-  });
-  document.head.appendChild(s2);
+async function loadAll(){
+  photos=await sGet();
+  renderStats();
+  renderGallery();
+  if(isTeacher) renderAdmin();
 }
 
-function tryInit(){
-  if(!gisOk||!gapiOk) return;
-  tokenClient=google.accounts.oauth2.initTokenClient({
-    client_id: CLIENT_ID,
-    scope: SCOPES,
-    callback: async r=>{
-      if(r.error){console.warn(r.error);return;}
-      token=r.access_token;
-      gapi.client.setToken({access_token:token});
-      await fetchUserInfo();
-      await ensureFolder();
-      updateBanner();
-      await loadDriveStats();
-      toast('✅ Hoş geldiniz, '+(currentUser?currentUser.name:'')+'!');
-    }
-  });
-  setTimeout(()=>{if(tokenClient)tokenClient.requestAccessToken({prompt:''});},1500);
+function doLogin(){
+  const n=document.getElementById('nameIn').value.trim();
+  const p=document.getElementById('pwIn').value;
+  if(!n||p!==APP_PASS){document.getElementById('loginErr').style.display='block';return;}
+  isTeacher=true; myName=n;
+  lsS('gt','1'); lsS('gn',n);
+  document.getElementById('loginErr').style.display='none';
+  document.getElementById('pwIn').value='';
+  showPage('panel');
 }
-
-async function fetchUserInfo(){
-  try{
-    const r=await fetch('https://www.googleapis.com/oauth2/v2/userinfo',{headers:{Authorization:'Bearer '+token}});
-    const d=await r.json();
-    currentUser={name:d.name||d.email, email:d.email, avatar:d.picture};
-    lsSet('gezi_user', JSON.stringify(currentUser));
-  }catch(e){console.warn(e);}
-}
+function doLogout(){isTeacher=false;lsD('gt');showPage('gallery');}
 
 function showPage(p){
   if(p==='login'&&isTeacher) p='panel';
   document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(x=>x.classList.remove('active'));
   document.getElementById('page-'+p).classList.add('active');
-  if(p==='gallery'){document.getElementById('btnG').classList.add('active');loadDrivePhotos();}
-  if(p==='panel'){document.getElementById('btnT').classList.add('active');loadDriveStats();}
+  if(p==='gallery'){document.getElementById('btnG').classList.add('active');loadAll();}
+  if(p==='panel'){document.getElementById('btnT').classList.add('active');document.getElementById('welcomeName').textContent=myName;loadAll();}
   if(p==='login') document.getElementById('btnT').classList.add('active');
 }
 
-function doLogin(){
-  if(document.getElementById('pwIn').value===APP_PASS){
-    isTeacher=true; lsSet('gezi_teacher','1');
-    document.getElementById('loginErr').style.display='none';
-    document.getElementById('pwIn').value='';
-    showPage('panel');
-  } else document.getElementById('loginErr').style.display='block';
-}
-function doLogout(){isTeacher=false;lsDel('gezi_teacher');showPage('gallery');}
-
-function signIn(){
-  if(!tokenClient){toast('Yükleniyor...');setTimeout(signIn,1500);return;}
-  tokenClient.requestAccessToken({prompt:token?'':'consent'});
-}
-function signOut(){
-  if(token) google.accounts.oauth2.revoke(token);
-  token=null; currentUser=null; lsDel('gezi_user'); updateBanner();
-  toast('Drive bağlantısı kesildi.');
-}
-function updateBanner(){
-  const b=document.getElementById('authBanner');
-  if(token&&currentUser){
-    b.className='auth-banner connected';
-    b.innerHTML=`<div class="user-info">
-      ${currentUser.avatar?`<img src="${currentUser.avatar}" class="avatar">`:''}
-      <p>✅ <strong>${currentUser.name}</strong> <span>— Drive bağlı</span></p>
-    </div>
-    <button class="btn btn-sm" style="background:#fff;color:#0c2d4a;border:1.5px solid #b5d4f4;" onclick="signOut()">Çıkış</button>`;
-  } else {
-    b.className='auth-banner';
-    b.innerHTML='<p>📁 Google Drive bağlantısı yok <span>— okul mailinizle bağlanın</span></p><button class="btn btn-yellow btn-sm" onclick="signIn()">Google ile Bağlan</button>';
-  }
-}
-
-async function ensureFolder(){
-  try{
-    const r=await fetch(`https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent("name='"+FOLDER_NAME+"' and mimeType='application/vnd.google-apps.folder' and trashed=false")}&fields=files(id)`,
-      {headers:{Authorization:'Bearer '+token}});
-    const d=await r.json();
-    folderId=(d.files&&d.files.length)?d.files[0].id:null;
-    if(!folderId){
-      const cr=await fetch('https://www.googleapis.com/drive/v3/files',{
-        method:'POST',
-        headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},
-        body:JSON.stringify({name:FOLDER_NAME,mimeType:'application/vnd.google-apps.folder'})
-      });
-      folderId=(await cr.json()).id;
-    }
-  }catch(e){console.error(e);}
-}
-
-// ── DRIVE OKUMA ───────────────────────────────────────────────────────────────
-async function fetchAllDrivePhotos(){
-  if(!token) return [];
-  try{
-    const r=await fetch(
-      `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent("'"+FOLDER_ID+"' in parents and mimeType contains 'image/' and trashed=false")}&fields=files(id,name,description,createdTime)&orderBy=createdTime%20desc&pageSize=1000`,
-      {headers:{Authorization:'Bearer '+token}}
-    );
-    const d=await r.json();
-    if(!d.files) return [];
-    return d.files.map(f=>{
-      // description formatı: "KONUM||NOT||AD SOYAD||EMAIL"
-      const p=(f.description||'').split('||');
-      return {
-        id:'drv_'+f.id,
-        driveId:f.id,
-        loc:p[0]||'Diğer',
-        note:p[1]||'',
-        uploader:p[2]||'Bilinmiyor',
-        email:p[3]||'',
-        time:new Date(f.createdTime).toLocaleString('tr-TR'),
-        date:new Date(f.createdTime).toDateString(),
-        driveLink:`https://drive.google.com/file/d/${f.id}/view`
-      };
-    });
-  }catch(e){console.warn(e);return [];}
-}
-
-async function loadDriveStats(){
-  const photos=await fetchAllDrivePhotos();
-  drivePhotos=photos;
-  renderStats(photos);
-  renderAdminList(photos);
-}
-
-function renderStats(photos){
-  const total=photos.length;
-  const today=new Date().toDateString();
-  const todayCount=photos.filter(p=>p.date===today).length;
+function renderStats(){
+  const tot=photos.length, today=new Date().toDateString();
+  const tod=photos.filter(p=>p.date===today).length;
   const locs=new Set(photos.map(p=>p.loc));
-  const teachers={};
-  photos.forEach(p=>{
-    if(!teachers[p.uploader]) teachers[p.uploader]={count:0,email:p.email};
-    teachers[p.uploader].count++;
-  });
-  const teacherCount=Object.keys(teachers).length;
-
-  // Panel stats
-  document.getElementById('sTotal').textContent=total;
-  document.getElementById('sToday').textContent=todayCount;
-  document.getElementById('sLocs').textContent=locs.size;
-  document.getElementById('sTeachers').textContent=teacherCount;
-
-  // Public stats
-  document.getElementById('pTotal').textContent=total;
-  document.getElementById('pToday').textContent=todayCount;
+  const tea={};photos.forEach(p=>tea[p.uploader]=(tea[p.uploader]||0)+1);
+  const tc=Object.keys(tea).length;
+  document.getElementById('badge').textContent=tot+' fotoğraf';
+  document.getElementById('gCount').textContent=tot+' fotoğraf';
+  document.getElementById('pTotal').textContent=tot;
+  document.getElementById('pToday').textContent=tod;
   document.getElementById('pLocs').textContent=locs.size;
-  document.getElementById('pTeachers').textContent=teacherCount;
-  document.getElementById('badge').textContent=total+' fotoğraf';
-  document.getElementById('gCount').textContent=total+' fotoğraf';
-
-  // Loc table
-  const locMap={};
-  photos.forEach(p=>{locMap[p.loc]=(locMap[p.loc]||0)+1;});
-  const maxLoc=Math.max(...Object.values(locMap),1);
-  const locRows=Object.entries(locMap).sort((a,b)=>b[1]-a[1]).map(([loc,cnt])=>
-    `<tr><td>📍 ${loc}</td><td style="font-weight:700;color:#1a7abf;text-align:right;">${cnt}</td>
-     <td style="width:80px"><div class="bar"><div class="bar-fill" style="width:${Math.round(cnt/maxLoc*100)}%"></div></div></td></tr>`
-  ).join('');
-  document.getElementById('locTable').innerHTML=
-    `<thead><tr><th>Konum</th><th>Foto</th><th></th></tr></thead><tbody>${locRows||'<tr><td colspan="3" style="color:#aaa;text-align:center;padding:12px">Henüz veri yok</td></tr>'}</tbody>`;
-
-  // Teacher table (panel)
-  const me=currentUser?currentUser.name:'';
-  const tRows=Object.entries(teachers).sort((a,b)=>b[1].count-a[1].count).map(([name,{count}])=>
-    `<tr><td><span class="t-badge${name===me?' me':''}">${name===me?'👤 '+name:name}</span></td>
-     <td style="font-weight:700;color:#1a7abf;text-align:right;">${count} fotoğraf</td></tr>`
-  ).join('');
-  document.getElementById('teacherTable').innerHTML=
-    `<thead><tr><th>Öğretmen</th><th>Yüklenen</th></tr></thead><tbody>${tRows||'<tr><td colspan="2" style="color:#aaa;text-align:center;padding:12px">Henüz veri yok</td></tr>'}</tbody>`;
-
-  // Teacher chips (gallery)
+  document.getElementById('pTeachers').textContent=tc;
+  if(document.getElementById('sTotal')){
+    document.getElementById('sTotal').textContent=tot;
+    document.getElementById('sToday').textContent=tod;
+    document.getElementById('sLocs').textContent=locs.size;
+    document.getElementById('sTeachers').textContent=tc;
+    const lm={};photos.forEach(p=>lm[p.loc]=(lm[p.loc]||0)+1);
+    const ml=Math.max(...Object.values(lm),1);
+    document.getElementById('locTable').innerHTML='<thead><tr><th>Konum</th><th>Foto</th><th></th></tr></thead><tbody>'+
+      (Object.entries(lm).sort((a,b)=>b[1]-a[1]).map(([l,c])=>
+        `<tr><td>📍${l}</td><td style="font-weight:700;color:#1a7abf;text-align:right">${c}</td><td style="width:70px"><div class="bar"><div class="bar-fill" style="width:${Math.round(c/ml*100)}%"></div></div></td></tr>`
+      ).join('')||'<tr><td colspan="3" style="color:#aaa;text-align:center;padding:10px">Veri yok</td></tr>')+'</tbody>';
+    document.getElementById('teacherTable').innerHTML='<thead><tr><th>Öğretmen</th><th>Foto</th></tr></thead><tbody>'+
+      (Object.entries(tea).sort((a,b)=>b[1]-a[1]).map(([n,c])=>
+        `<tr><td>${n===myName?'<strong>👤 '+n+'</strong>':n}</td><td style="font-weight:700;color:#1a7abf;text-align:right">${c}</td></tr>`
+      ).join('')||'<tr><td colspan="2" style="color:#aaa;text-align:center;padding:10px">Veri yok</td></tr>')+'</tbody>';
+  }
   document.getElementById('teacherChips').innerHTML=
-    Object.entries(teachers).sort((a,b)=>b[1].count-a[1].count).map(([name,{count}])=>
-      `<div class="t-chip">👤 ${name} <span class="cnt">${count}</span></div>`
+    Object.entries(tea).sort((a,b)=>b[1]-a[1]).map(([n,c])=>
+      `<div class="t-chip">👤${n}<span class="cnt">${c}</span></div>`
     ).join('')||'<span style="color:#aaa;font-size:13px">Henüz yükleme yapılmadı</span>';
 }
 
-function renderAdminList(photos){
+function renderGallery(){
+  const locs=['Tümü',...new Set(photos.map(p=>p.loc))];
+  document.getElementById('locTabs').innerHTML=locs.map(l=>
+    `<button class="ltab${l===activeF?' active':''}" onclick="setGF('${e(l)}')">${l==='Tümü'?'🌍 Tümü':'📍 '+l}</button>`).join('');
+  const list=activeF==='Tümü'?photos:photos.filter(p=>p.loc===activeF);
+  const g=document.getElementById('gGrid');
+  if(!list.length){g.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="ei">📷</div><p>Gezi başladığında fotoğraflar burada görünecek!</p></div>';return;}
+  g.innerHTML=list.map(p=>`<div class="g-item" onclick="openLb('${e(p.src)}','${e(p.loc)}','${e(p.note||'')}','${e(p.uploader)}')">
+    <img src="${p.src}" alt="${p.loc}" loading="lazy">
+    <div class="g-info"><span class="gloc">📍${p.loc}</span>${p.note?`<p class="gnote">${p.note}</p>`:''}<p class="guploader">👤${p.uploader}</p><p class="gtime">${p.time}</p></div>
+  </div>`).join('');
+}
+function setGF(l){activeF=l;renderGallery();}
+
+function renderAdmin(){
   const locs=['Tümü',...new Set(photos.map(p=>p.loc))];
   document.getElementById('filterRow').innerHTML=locs.map(l=>
-    `<button class="fbtn${l===activeF?' active':''}" onclick="setF('${esc(l)}')">${l}</button>`).join('');
+    `<button class="fbtn${l===activeF?' active':''}" onclick="setF('${e(l)}')">${l}</button>`).join('');
   const list=activeF==='Tümü'?photos:photos.filter(p=>p.loc===activeF);
   const el=document.getElementById('adminList');
   if(!list.length){el.innerHTML='<div class="empty"><div class="ei">📭</div><p>Fotoğraf yok</p></div>';return;}
-  el.innerHTML=list.map(p=>
-    `<div class="photo-item">
-      <img class="photo-img" src="https://lh3.googleusercontent.com/d/${p.driveId}=w400"
-        onerror="this.src='https://drive.google.com/thumbnail?id=${p.driveId}&sz=w400'"
-        onclick="openLb('https://lh3.googleusercontent.com/d/${p.driveId}=w1200','${esc(p.loc)}','${esc(p.note||'')}','${esc(p.driveLink)}','${esc(p.uploader)}')">
-      <div class="photo-info">
-        <span class="ploc">📍 ${p.loc}</span>
-        ${p.note?`<p class="pnote">${p.note}</p>`:''}
-        <p class="puploader">👤 ${p.uploader}</p>
-        <p class="ptime">🕐 ${p.time}</p>
-        <div class="pacts"><a href="${p.driveLink}" target="_blank" class="btn btn-green btn-sm">.</a></div>
-      </div>
-    </div>`).join('');
+  el.innerHTML=list.map(p=>`<div class="photo-item">
+    <img class="photo-img" src="${p.src}" onclick="openLb('${e(p.src)}','${e(p.loc)}','${e(p.note||'')}','${e(p.uploader)}')">
+    <div class="photo-info">
+      <span class="ploc">📍${p.loc}</span>
+      ${p.note?`<p class="pnote">${p.note}</p>`:''}
+      <p class="puploader">👤${p.uploader}</p>
+      <p class="ptime">🕐${p.time}</p>
+      <div class="pacts"><button class="btn btn-danger btn-sm" onclick="delPhoto('${p.id}')">🗑 Sil</button></div>
+    </div>
+  </div>`).join('');
+}
+function setF(l){activeF=l;renderAdmin();}
+
+async function delPhoto(id){
+  if(!confirm('Bu fotoğrafı silmek istiyor musunuz?'))return;
+  photos=photos.filter(p=>p.id!==id);
+  await sSet(photos); renderStats(); renderAdmin(); toast('Fotoğraf silindi.');
 }
 
-function setF(l){activeF=l;renderAdminList(drivePhotos);}
-
-// ── GALERİ ────────────────────────────────────────────────────────────────────
-async function loadDrivePhotos(){
-  const g=document.getElementById('gGrid');
-  g.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="spinner" style="margin:0 auto 10px"></div><p>Fotoğraflar yükleniyor...</p></div>';
-
-  if(token){
-    const photos=await fetchAllDrivePhotos();
-    drivePhotos=photos;
-    renderStats(photos);
-    renderGallery(photos);
-    return;
-  }
-  // Token yoksa iframe embed
-  g.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:10px 0;">
-    <iframe src="https://drive.google.com/embeddedfolderview?id=${FOLDER_ID}#grid"
-      style="width:100%;height:580px;border:none;border-radius:14px;border:1.5px solid #b5d4f4;" allowfullscreen></iframe>
-    <p style="font-size:12px;color:#aaa;margin-top:8px;">
-      <a href="https://drive.google.com/drive/folders/${FOLDER_ID}" target="_blank" style="color:#1a7abf;">.</a>
-    </p>
-  </div>`;
-}
-
-function renderGallery(photos){
-  const locs=['Tümü',...new Set(photos.map(p=>p.loc))];
-  document.getElementById('locTabs').innerHTML=locs.map(l=>
-    `<button class="ltab${l===activeF?' active':''}" onclick="setGF('${esc(l)}')">${l==='Tümü'?'🌍 Tümü':'📍 '+l}</button>`).join('');
-  const list=activeF==='Tümü'?photos:photos.filter(p=>p.loc===activeF);
-  const g=document.getElementById('gGrid');
-  if(!list.length){g.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="ei">📷</div><p>Bu konumda fotoğraf yok</p></div>';return;}
-  g.innerHTML=list.map(p=>
-    `<div class="g-item" onclick="openLb('https://lh3.googleusercontent.com/d/${p.driveId}=w1200','${esc(p.loc)}','${esc(p.note||'')}','${esc(p.driveLink)}','${esc(p.uploader)}')">
-      <img src="https://lh3.googleusercontent.com/d/${p.driveId}=w400"
-        onerror="this.src='https://drive.google.com/thumbnail?id=${p.driveId}&sz=w400'"
-        alt="${p.loc}" loading="lazy">
-      <div class="g-info">
-        <span class="gloc">📍 ${p.loc}</span>
-        ${p.note?`<p class="gnote">${p.note}</p>`:''}
-        <p class="guploader">👤 ${p.uploader}</p>
-        <p class="gtime">${p.time}</p>
-      </div>
-    </div>`).join('');
-}
-
-function setGF(l){activeF=l;loadDrivePhotos();}
-
-// ── UPLOAD ────────────────────────────────────────────────────────────────────
 function handleFiles(files){
   pending=Array.from(files);
-  const g=document.getElementById('prevGrid'); g.innerHTML='';
+  const g=document.getElementById('prevGrid');g.innerHTML='';
   pending.forEach((f,i)=>{
     const r=new FileReader();
-    r.onload=e=>{
-      const d=document.createElement('div'); d.className='prev-item'; d.id='pi'+i;
-      d.innerHTML=`<img src="${e.target.result}"><button class="dp" onclick="rmPrev(${i})">✕</button>`;
-      g.appendChild(d);
-    }; r.readAsDataURL(f);
+    r.onload=ev=>{const d=document.createElement('div');d.className='prev-item';d.id='pi'+i;
+      d.innerHTML=`<img src="${ev.target.result}"><button class="dp" onclick="rmP(${i})">✕</button>`;g.appendChild(d);};
+    r.readAsDataURL(f);
   });
   document.getElementById('upBtn').style.display=pending.length?'block':'none';
 }
-function rmPrev(i){
-  pending.splice(i,1);
-  pending.length?handleFiles(pending):(document.getElementById('prevGrid').innerHTML='',document.getElementById('upBtn').style.display='none');
-}
+function rmP(i){pending.splice(i,1);pending.length?handleFiles(pending):(document.getElementById('prevGrid').innerHTML='',document.getElementById('upBtn').style.display='none');}
 
 async function uploadPhotos(){
   const loc=document.getElementById('selLoc').value;
   const note=document.getElementById('inNote').value.trim();
   if(!loc){toast('Lütfen konum seçin!');return;}
   if(!pending.length){toast('Lütfen fotoğraf seçin!');return;}
-  if(!token){toast('Önce Google Drive\'a bağlanın!');return;}
-  if(!folderId) await ensureFolder();
-  const uploaderName=currentUser?currentUser.name:'Bilinmiyor';
-  const uploaderEmail=currentUser?currentUser.email:'';
-
   setLoad(true,'Hazırlanıyor...',0);
+  const now=new Date();
   for(let i=0;i<pending.length;i++){
-    setLoad(true,`Yükleniyor: ${i+1}/${pending.length}`,Math.round(i/pending.length*100));
-    const f=pending[i];
-    const b64=await toB64(f);
-    try{
-      const fname=loc.replace(/[^\w\sğüşöçİĞÜŞÖÇ]/g,'').trim()+'_'+Date.now()+'.'+( f.name.split('.').pop()||'jpg');
-      const boundary='bnd'+Date.now();
-      // description: "KONUM||NOT||AD SOYAD||EMAIL"
-      const desc=loc+'||'+(note||'')+'||'+uploaderName+'||'+uploaderEmail;
-      const body=`--${boundary}\r\nContent-Type: application/json\r\n\r\n`+
-        JSON.stringify({name:fname,parents:[folderId],description:desc})+
-        `\r\n--${boundary}\r\nContent-Type: ${f.type}\r\nContent-Transfer-Encoding: base64\r\n\r\n${b64}\r\n--${boundary}--`;
-      const res=await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id',{
-        method:'POST',
-        headers:{Authorization:'Bearer '+token,'Content-Type':`multipart/related; boundary=${boundary}`},
-        body
-      });
-      const data=await res.json();
-      await fetch(`https://www.googleapis.com/drive/v3/files/${data.id}/permissions`,{
-        method:'POST',
-        headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},
-        body:JSON.stringify({role:'reader',type:'anyone'})
-      });
-      const pi=document.getElementById('pi'+i);
-      if(pi){const s=document.createElement('div');s.className='st';s.textContent='✅ Drive';pi.appendChild(s);}
-    }catch(e){console.error(e);}
+    setLoad(true,`Sıkıştırılıyor: ${i+1}/${pending.length}`,Math.round(i/pending.length*80));
+    const raw=await toB64(pending[i]);
+    const src=await compress(raw,900,0.78);
+    photos.unshift({id:Date.now()+'_'+Math.random().toString(36).slice(2),src,loc,note,uploader:myName,time:now.toLocaleString('tr-TR'),date:now.toDateString()});
   }
-  setLoad(true,'Tamamlandı!',100);
-  setTimeout(async()=>{
-    setLoad(false);
-    pending=[];
-    document.getElementById('prevGrid').innerHTML='';
-    document.getElementById('upBtn').style.display='none';
-    document.getElementById('fileIn').value='';
-    document.getElementById('inNote').value='';
-    document.getElementById('selLoc').value='';
-    await loadDriveStats();
-    toast('✅ Fotoğraflar Drive\'a yüklendi!');
-  },500);
+  setLoad(true,'Kaydediliyor...',90);
+  const ok=await sSet(photos);
+  setLoad(false);
+  toast(ok?`✅ ${pending.length} fotoğraf yüklendi!`:'⚠️ Kaydedilemedi — depolama dolu olabilir.');
+  pending=[];
+  document.getElementById('prevGrid').innerHTML='';
+  document.getElementById('upBtn').style.display='none';
+  document.getElementById('fileIn').value='';
+  document.getElementById('inNote').value='';
+  document.getElementById('selLoc').value='';
+  renderStats(); renderAdmin();
 }
 
-function toB64(file){return new Promise(res=>{const r=new FileReader();r.onload=e=>res(e.target.result.split(',')[1]);r.readAsDataURL(file);});}
+function toB64(f){return new Promise(r=>{const fr=new FileReader();fr.onload=ev=>r(ev.target.result);fr.readAsDataURL(f);});}
+function compress(src,maxW,q){return new Promise(r=>{const i=new Image();i.onload=()=>{const ratio=Math.min(1,maxW/i.width);const c=document.createElement('canvas');c.width=Math.round(i.width*ratio);c.height=Math.round(i.height*ratio);c.getContext('2d').drawImage(i,0,0,c.width,c.height);r(c.toDataURL('image/jpeg',q));};i.src=src;});}
 
-// ── LIGHTBOX ──────────────────────────────────────────────────────────────────
-function openLb(src,loc,note,dl,uploader){
-  document.getElementById('lbImg').src=src;
-  document.getElementById('lbInfo').innerHTML=
-    '📍 '+loc+(note?' — '+note:'')+' • 👤 '+(uploader||'')+(dl?` <a href="${dl}" target="_blank" onclick="event.stopPropagation()">↗ Drive</a>`:'');
-  document.getElementById('lb').classList.add('open');
-}
-function closeLb(e){if(!e||e.target!==document.getElementById('lbImg'))document.getElementById('lb').classList.remove('open');}
-
+function openLb(src,loc,note,up){document.getElementById('lbImg').src=src;document.getElementById('lbInfo').textContent='📍'+loc+(note?' — '+note:'')+' • 👤'+(up||'');document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200);}
 function setLoad(v,msg,pct){document.getElementById('loading').classList.toggle('show',v);if(msg)document.getElementById('ldMsg').textContent=msg;if(pct!==undefined)document.getElementById('progFill').style.width=pct+'%';}
-function esc(s){return(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+function e(s){return(s||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;');}
 
 const uz=document.getElementById('uz');
-uz.addEventListener('dragover',e=>{e.preventDefault();uz.classList.add('drag');});
+uz.addEventListener('dragover',ev=>{ev.preventDefault();uz.classList.add('drag');});
 uz.addEventListener('dragleave',()=>uz.classList.remove('drag'));
-uz.addEventListener('drop',e=>{e.preventDefault();uz.classList.remove('drag');handleFiles(e.dataTransfer.files);});
+uz.addEventListener('drop',ev=>{ev.preventDefault();uz.classList.remove('drag');handleFiles(ev.dataTransfer.files);});
+
+setInterval(()=>{if(document.getElementById('page-gallery').classList.contains('active'))loadAll();},30000);
 </script>
 </body>
 </html>
